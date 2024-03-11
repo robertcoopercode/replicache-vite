@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: postgres-replicache-vite
+    image: postgres:13
+    restart: always
+    ports:
+      - '5434:5432'
+    environment:
+        POSTGRES_USER: replicache
+        POSTGRES_PASSWORD: replicache
+        POSTGRES_DB: todo
+    healthcheck:
+      test: [ 'CMD-SHELL', 'pg_isready -U postgres' ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+    db:
