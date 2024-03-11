@@ -1,7 +1,7 @@
 import {Dialog} from '@headlessui/react';
 import {nanoid} from 'nanoid';
 import Navigo from 'navigo';
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {ReadTransaction, Replicache} from 'replicache';
 import {useSubscribe} from 'replicache-react';
 import {TodoUpdate, todosByList} from 'shared';
@@ -9,7 +9,7 @@ import {getList, listLists} from 'shared/src/list';
 import Header from './components/header';
 import MainSection from './components/main-section';
 import {Share} from './components/share';
-import {M} from './mutators';
+import {M, mutators} from './mutators';
 
 // This is the top-level component for our app.
 const App = ({
@@ -163,4 +163,64 @@ function useEventSourcePoke(url: string, rep: Replicache<M>) {
   }, [url, rep]);
 }
 
-export default App;
+function Root() {
+  // See https://doc.replicache.dev/licensing for how to get a license key.
+  const licenseKey = import.meta.env.VITE_REPLICACHE_LICENSE_KEY;
+  if (!licenseKey) {
+    throw new Error('Missing VITE_REPLICACHE_LICENSE_KEY');
+  }
+  const [userID, setUserID] = useState('');
+  const [r, setR] = useState<Replicache<M> | null>(null);
+
+  useEffect(() => {
+    if (!userID) {
+      return;
+    }
+    console.log('updating replicache');
+    const r = new Replicache({
+      name: userID,
+      licenseKey,
+      mutators,
+      pushURL: `/api/replicache/push?userID=${userID}`,
+      pullURL: `/api/replicache/pull?userID=${userID}`,
+      logLevel: 'debug',
+    });
+    setR(r);
+    return () => {
+      void r.close();
+    };
+  }, [userID]);
+
+  const storageListener = useCallback(() => {
+    let userID = localStorage.getItem('userID');
+    if (!userID) {
+      userID = nanoid(6);
+      localStorage.setItem('userID', userID);
+    }
+    setUserID(userID);
+  }, []);
+  useEffect(() => {
+    storageListener();
+    addEventListener('storage', storageListener, false);
+    return () => {
+      removeEventListener('storage', storageListener, false);
+    };
+  }, []);
+
+  const handleUserIDChange = (userID: string) => {
+    localStorage.setItem('userID', userID);
+    storageListener();
+  };
+
+  return (
+      r && (
+          <App
+              rep={r}
+              userID={userID}
+              onUserIDChange={userID => handleUserIDChange(userID)}
+          />
+      )
+  );
+}
+
+export default Root;
