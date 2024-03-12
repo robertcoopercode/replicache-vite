@@ -1,5 +1,5 @@
 import {Todo, TodoUpdate} from 'shared';
-import {TodoItem} from './todo-item';
+import {TodoItem} from 'routes/todo/components/todo-item';
 
 const TodoList = ({
   todos,

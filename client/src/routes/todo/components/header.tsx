@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import TodoTextInput from './todo-text-input';
+import TodoTextInput from 'routes/todo/components/todo-text-input';
 
 const Header = ({
   listName,

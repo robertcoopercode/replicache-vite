@@ -1,5 +1,5 @@
 import {useSubscribe} from 'replicache-react';
-import {M} from '../mutators';
+import {M} from 'mutators';
 import {Replicache} from 'replicache';
 import {listShares} from 'shared';
 import {FormEvent} from 'react';

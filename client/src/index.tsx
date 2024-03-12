@@ -2,11 +2,11 @@ import {nanoid} from 'nanoid';
 import React, {useCallback, useEffect, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import {Replicache} from 'replicache';
-import App from './app';
+import Todo from 'routes/todo/todo';
 import './index.css';
 import {M, mutators} from './mutators';
 import {RouterProvider} from "react-router-dom";
-import {router} from "./router";
+import {router} from "routes/router";
 
 async function init() {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

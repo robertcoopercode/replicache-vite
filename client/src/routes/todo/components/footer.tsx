@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterLink from './link';
+import FilterLink from 'components/link';
 
 const FILTER_TITLES = ['All', 'Active', 'Completed'];
 

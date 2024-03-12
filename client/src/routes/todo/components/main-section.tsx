@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Todo, TodoUpdate} from 'shared';
-import Footer from './footer';
-import TodoList from './todo-list';
+import Footer from 'routes/todo/components/footer';
+import TodoList from 'routes/todo/components/todo-list';
 
 const MainSection = ({
   todos,

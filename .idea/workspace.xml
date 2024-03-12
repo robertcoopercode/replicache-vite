@@ -5,16 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6763fc89-306a-43a5-950a-06235757eb25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/router.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/ReplicacheContext.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/ReplicacheProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/useReplicache.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/routes/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/routes/playground.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/routes/router.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/routes/todo/todo.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/todo/components/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/todo/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/main-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/todo/components/main-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/share.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/todo/components/share.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/todo-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/todo/components/todo-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/todo-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/todo/components/todo-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/todo-text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/todo/components/todo-text-input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/router.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/vite.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/robertcooper/Projects/replicache-vite/client/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -56,7 +71,13 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/routes" />
+      <recent name="$PROJECT_DIR$/client/src/routes/todo/components" />
+      <recent name="$PROJECT_DIR$/client/src/routes/todo" />
       <recent name="$PROJECT_DIR$/client" />
     </key>
   </component>
@@ -75,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710182268745</updated>
-      <workItem from="1710182269769" duration="5372000" />
+      <workItem from="1710182269769" duration="12534000" />
     </task>
     <servers />
   </component>

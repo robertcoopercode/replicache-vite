@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import classnames from 'classnames';
 import {Todo, TodoUpdate} from 'shared';
-import TodoTextInput from './todo-text-input';
+import TodoTextInput from 'routes/todo/components/todo-text-input';
 
 export function TodoItem({
   todo,
